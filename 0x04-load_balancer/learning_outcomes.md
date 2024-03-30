@@ -43,3 +43,33 @@
 - Suppose a software development company wants to deploy a web application on a Debian-based server. To ensure reliable performance and scalability, they decide to implement load-balancing using HAProxy. After installing HAProxy packages via the Debian repository, they configure HAProxy to distribute incoming traffic across multiple backend servers.
 - For example, if the web application consists of separate frontend and backend servers, HAProxy can intelligently route user requests to the appropriate server based on the requested URL path.
 - This setup ensures efficient resource utilization and fault tolerance, enhancing the overall stability and performance of the web application.
+
+## TCP (Transmission Control Protocol) and HTTP (Hypertext Transfer Protocol)
+
+- are fundamental protocols used in networking, particularly for communication between applications over the internet. Here's a brief overview and some real-world examples of TCP and HTTP-based applications:
+
+- 1. TCP (Transmission Control Protocol):
+
+	- Overview: TCP is a connection-oriented protocol that provides reliable, ordered, and error-checked delivery of data between applications running on devices connected to a network. It ensures that data packets are delivered in the correct order and handles retransmissions in case of packet loss or errors.
+
+	- Real-world examples:
+	 - Web browsing: When you visit a website, your web browser uses TCP to establish a connection with the web server and exchange data, such as HTML files, images, and other resources.
+
+	 - Email: SMTP (Simple Mail Transfer Protocol) and IMAP (Internet Message Access Protocol) are examples of protocols that use TCP for sending and receiving email messages between mail servers and clients.
+
+	 - File transfer: FTP (File Transfer Protocol) and SFTP (SSH File Transfer Protocol) are protocols that rely on TCP for transferring files between a client and a server.
+
+## 2. HTTP (Hypertext Transfer Protocol):
+
+	- Overview: HTTP is an application layer protocol used for transmitting and receiving hypertext documents on the World Wide Web. It defines the format of messages exchanged between web browsers and web servers, allowing users to request and access web pages, images, videos, and other resources.
+
+	- Real-world examples:
+	 - Web browsing: When you type a URL into your web browser's address bar and hit enter, the browser sends an HTTP request to the corresponding web server to retrieve the requested web page. The server responds with an HTTP response containing the requested content, which is then displayed in the browser.
+
+	- RESTful APIs: Many web services and APIs use HTTP to enable communication between client applications (such as mobile apps or web applications) and servers. For example, a weather API may allow clients to retrieve weather forecast data by sending HTTP GET requests to specific endpoints.
+
+	- Online shopping: E-commerce websites use HTTP to facilitate online transactions, allowing users to browse products, add items to their cart, and complete purchases securely over the internet.
+
+## In summary
+
+- TCP and HTTP are essential protocols that underpin communication on the internet, enabling the reliable transmission of data between applications and facilitating various online activities and services.

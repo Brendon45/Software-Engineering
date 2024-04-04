@@ -88,4 +88,55 @@ def transfer_file(c):
 
 ## Examples:
 
+## Deploying Code with Fabric:
 
+python
+from fabric import task
+
+@task
+def deploy_code(c):
+    # Pull latest code from Git repository
+    c.local("git pull origin master")
+
+    # Transfer code to remote server
+    c.put("app_directory/", "/var/www/html/app_directory/")
+
+    # Restart web server (e.g., Nginx or Apache)
+    c.run("sudo systemctl restart nginx")
+
+## Managing Nginx Configuration with Fabric:
+
+python
+code
+from fabric import task
+
+@task
+def update_nginx_conf(c):
+    # Transfer Nginx configuration file to remote server
+    c.put("nginx.conf", "/etc/nginx/nginx.conf")
+
+    # Reload Nginx configuration
+    c.run("sudo systemctl reload nginx")
+
+## Difference between root and alias in Nginx Configuration:
+Suppose we have an Nginx configuration for serving static files:
+
+nginx
+Copy code
+server {
+    listen 80;
+    server_name example.com;
+
+    # Using 'root' directive
+    root /var/www/html/static;
+
+    # Using 'alias' directive
+    location /images/ {
+        alias /var/www/html/images/;
+    }
+}
+
+- With root, a request to http://example.com/image.jpg serves the file /var/www/html/static/image.jpg.
+- With alias, a request to http://example.com/images/image.jpg serves the file /var/www/html/images/image.jpg.
+
+- These examples demonstrate how Fabric can be used to automate deployment tasks, manage Nginx configuration, and understand the practical differences between root and alias directives in Nginx configuration.

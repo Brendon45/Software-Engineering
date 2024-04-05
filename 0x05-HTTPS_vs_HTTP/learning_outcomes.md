@@ -34,4 +34,16 @@ HTTPS Browsers
 	- Visitors can verify you are a registered business and that you own the domain
 	- Customers are more likely to trust and complete purchases from sites that use HTTPS
 
+## HTTP and HTTPS: What do they do, and how are they different?
 
+- You click to check out at an online merchant. Suddenly your browser address bar says HTTPS instead of HTTP. What's going on? Is your credit card information safe?
+
+- Good news. Your information is safe. The website you are working with has made sure that no one can steal your information.
+
+- Instead of HyperText Transfer Protocol (HTTP), this website uses HyperText Transfer Protocol Secure (HTTPS).
+
+- Using HTTPS, the computers agree on a "code" between them, and then they scramble the messages using that "code" so that no one in between can read them. This keeps your information safe from hackers.
+
+- They use the "code" on a Secure Sockets Layer (SSL), sometimes called Transport Layer Security (TLS) to send the information back and forth.
+
+- How does HTTP work? How is HTTPS different from HTTP? This tutorial will teach you about SSL, HTTP and HTTPS.

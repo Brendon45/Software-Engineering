@@ -40,4 +40,12 @@ SSL termination refers to the process of decrypting SSL/TLS encrypted traffic at
 
 - In a deployment script, a bash function can be used to automate repetitive tasks like deploying application updates. For instance, a function named deploy_app could be created to handle tasks such as stopping the application service, pulling the latest code from a Git repository, and restarting the service. This enhances efficiency and ensures consistency in the deployment process.
 
- 
+## The two main roles of SSL are:
+
+- 1. Encryption: SSL encrypts the data transmitted between the client and server, ensuring that it cannot be intercepted and read by unauthorized parties. This encryption protects sensitive information such as passwords, credit card numbers, and personal data from being accessed by hackers or eavesdroppers.
+
+- 2. Authentication: SSL authenticates the identity of the server to the client, ensuring that the client is communicating with the intended server and not a malicious impostor. This prevents man-in-the-middle attacks, where an attacker intercepts communication between the client and server and impersonates the server to steal sensitive information.
+
+## What is the purpose encrypting traffic?
+
+- The purpose of encrypting traffic is to protect the confidentiality and integrity of the data transmitted over the network. Encryption scrambles the data in such a way that it can only be decrypted by the intended recipient, ensuring that even if intercepted, the data remains secure and unreadable to unauthorized parties. This is crucial for maintaining the privacy of sensitive information and preventing unauthorized access or tampering. 

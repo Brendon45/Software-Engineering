@@ -71,3 +71,7 @@ HTTPS Browsers
 - The procedure for exchanging public keys using SSL Certificate to enable HTTPS, SSL and TLS is called Public Key Infrastructure (PKI).
 
 ## Hey Buddy! Get HTTPS on your website today!
+
+## Get locked in
+
+![BUDDY](https://st2.depositphotos.com/1579454/11354/i/450/depositphotos_113549952-stock-photo-macro-lcd-screen-with-https.jpg)

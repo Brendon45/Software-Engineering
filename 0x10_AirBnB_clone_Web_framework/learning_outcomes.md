@@ -66,37 +66,54 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
+
 def index():
+
     return 'Hello, World!'
 
 if __name__ == '__main__':
+
     app.run(debug=True)
 
 3. Handle Variables in Routes:
 You can include variables in routes by using <variable_name> syntax in the route URL. For example:
 
 @app.route('/user/<username>')
+
 def show_user_profile(username):
+
     return f'User: {username}'
 
 4. Templates:
-Templates in Flask are HTML files with placeholders for dynamic content. You can use the Jinja2 templating engine to create templates. For example:
+- Templates in Flask are HTML files with placeholders for dynamic content. You can use the Jinja2 templating engine to create templates. For example:
 
 <!-- template.html -->
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ title }}</title>
+
 </head>
+
 <body>
+
     <h1>Hello, {{ name }}!</h1>
+
 </body>
+
 </html>
 
 5. Render Template:
-You can render a template in Flask using the render_template function. For example:
+
+- You can render a template in Flask using the render_template function. For example:
 
 from flask import render_template
 
@@ -105,26 +122,37 @@ def hello(name=None):
     return render_template('template.html', name=name, title='Hello Page')
 
 6. Dynamic Templates:
-Jinja2 templates support loops, conditions, and other control structures. For example:
+
+- Jinja2 templates support loops, conditions, and other control structures. For example:
 
 <!-- dynamic_template.html -->
+
 <ul>
+
 {% for item in items %}
+
     <li>{{ item }}</li>
+
 {% endfor %}
+
 </ul>
 
 7. Display Data from MySQL Database:
-You can use a database library like SQLAlchemy to interact with a MySQL database in Flask. Retrieve data from the database and pass it to the template for rendering. For example:
+
+- You can use a database library like SQLAlchemy to interact with a MySQL database in Flask. Retrieve data from the database and pass it to the template for rendering. For example:
 
 from flask_sqlalchemy import SQLAlchemy
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
+
 db = SQLAlchemy(app)
 
 @app.route('/users')
+
 def users():
+
     users = User.query.all()
+
     return render_template('users.html', users=users)
 
 ## Route:
@@ -178,5 +206,3 @@ def users():
 - With SQLAlchemy, you can define database models as Python classes and interact with the database using these models.
 
 - Data retrieved from the database can be passed to templates for rendering dynamic content in HTML pages.
-
-

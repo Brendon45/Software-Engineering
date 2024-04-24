@@ -50,6 +50,8 @@
 
 ## What is a Flask?
 
+![FLASK](https://media.licdn.com/dms/image/D4E22AQFxZkLAA6llZA/feedshare-shrink_1280/0/1713702141875?e=1717027200&v=beta&t=W0kMx9AZa8uUK3pgWoAQIUi-0SoIzE8kmAkseavvU5U)
+
 -  is a lightweight web framework for Python that allows you to build web applications quickly and with minimal boilerplate code.Here's how you can build a simple web framework using Flask:
 
 ## 1. Install Flask:

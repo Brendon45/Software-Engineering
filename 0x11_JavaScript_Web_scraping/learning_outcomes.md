@@ -46,6 +46,14 @@ const updatedJsonData = JSON.stringify(obj);
 
 console.log(updatedJsonData); // Output: {"name":"John","age":35,"city":"New York"}
 
+## Explanation:
+
+- In this code snippet, we have a JSON string stored in the jsonData variable.
+- We use JSON.parse() to convert this JSON string into a JavaScript object (obj).
+- We then access and modify properties of this object (obj.name, obj.age).
+- Finally, we convert the modified JavaScript object back into a JSON string using JSON.stringify().
+- Print the updatedJsonData using console.log
+
 ## To use the fetch API for making HTTP requests in JavaScript:
 
 fetch('https://api.example.com/data')
@@ -55,6 +63,13 @@ fetch('https://api.example.com/data')
   .then(data => console.log(data))
 
   .catch(error => console.error('Error:', error));
+
+## Explanation:
+
+- This code snippet demonstrates how to use the fetch API to make an HTTP GET request to a specified URL (https://api.example.com/data).
+- The fetch function returns a Promise that resolves to the Response object representing the response to the request.
+- We use .then() to parse the response body as JSON using the .json() method.
+- Finally, we chain another .then() to log the parsed JSON data to the console and a .catch() to handle any errors that may occur during the request.
 
 ## How to use request and fetch API
 
@@ -75,6 +90,13 @@ request('https://api.example.com/data', function (error, response, body) {
   }
 
 });
+
+## Explanation:
+
+- This code snippet demonstrates how to use the request module in a Node.js environment to make an HTTP GET request to a specified URL (https://api.example.com/data).
+- We require the request module at the beginning of the script.
+- We then use the request function to initiate an HTTP request, passing in the URL and a callback function to handle the response.
+- Inside the callback function, we check for any errors (error) and log the response body (body) to the console if no errors occur.
 
 ## How to read and write a file using fs module
 
@@ -117,7 +139,10 @@ fs.writeFile('example.txt', content, err => {
 
 });
 
+## Explanation:
 
-
-
-
+- This code snippet demonstrates how to read and write files using the built-in fs (File System) module in Node.js.
+- We require the fs module at the beginning of the script.
+- We use the fs.readFile() function to asynchronously read the contents of a file named example.txt in UTF-8 encoding. We provide a callback function to handle any errors (err) and the data read from the file (data), which we log to the console.
+- We use the fs.writeFile() function to asynchronously write data to a file named example.txt. We provide the file path, content, and a callback function to handle any errors (err). If the write operation is successful, we log a message indicating that the file has been saved.
+- Both file read and write operations are asynchronous and non-blocking, allowing other tasks to continue while the file operations are in progress.

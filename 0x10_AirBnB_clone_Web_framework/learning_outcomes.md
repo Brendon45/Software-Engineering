@@ -52,12 +52,12 @@
 
 -  is a lightweight web framework for Python that allows you to build web applications quickly and with minimal boilerplate code.Here's how you can build a simple web framework using Flask:
 
-1. Install Flask:
+## 1. Install Flask:
 You can install Flask using pip:
 
 - pip install Flask
 
-2. Define Routes:
+## 2. Define Routes:
 
 In Flask, routes are URL patterns mapped to Python functions. You can define routes using the @app.route decorator. For example:
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
     app.run(debug=True)
 
-3. Handle Variables in Routes:
+## 3. Handle Variables in Routes:
 You can include variables in routes by using <variable_name> syntax in the route URL. For example:
 
 @app.route('/user/<username>')
@@ -84,7 +84,7 @@ def show_user_profile(username):
 
     return f'User: {username}'
 
-4. Templates:
+## 4. Templates:
 - Templates in Flask are HTML files with placeholders for dynamic content. You can use the Jinja2 templating engine to create templates. For example:
 
 <!-- template.html -->
@@ -111,17 +111,19 @@ def show_user_profile(username):
 
 </html>
 
-5. Render Template:
+## 5. Render Template:
 
 - You can render a template in Flask using the render_template function. For example:
 
 from flask import render_template
 
 @app.route('/hello/<name>')
+
 def hello(name=None):
+
     return render_template('template.html', name=name, title='Hello Page')
 
-6. Dynamic Templates:
+## 6. Dynamic Templates:
 
 - Jinja2 templates support loops, conditions, and other control structures. For example:
 
@@ -137,7 +139,7 @@ def hello(name=None):
 
 </ul>
 
-7. Display Data from MySQL Database:
+## 7. Display Data from MySQL Database:
 
 - You can use a database library like SQLAlchemy to interact with a MySQL database in Flask. Retrieve data from the database and pass it to the template for rendering. For example:
 

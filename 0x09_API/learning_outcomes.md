@@ -57,3 +57,21 @@ CSV (Comma-Separated Values) is a simple file format used to store tabular data,
 ## Real-world example (JSON format):
 
 When interacting with a weather API, the response might be returned in JSON format, containing information such as temperature, humidity, wind speed, and forecast. Developers can parse this JSON data to display weather information in their applications.
+
+## Pythonic naming conventions for packages, modules, classes, variables, functions, and constants typically follow these styles:
+
+- Package/Module Names: lowercase_with_underscores
+- Class Names: CapWords or CamelCase
+- Variable Names: lowercase_with_underscores
+- Function Names: lowercase_with_underscores
+- Constant Names: UPPERCASE_WITH_UNDERSCORES
+
+- CapWords or CamelCase in Python is significant as it helps improve readability and consistency within the codebase. By adhering to a consistent naming convention, it becomes easier for developers to understand and maintain the code.
+
+## Real-world example (Pythonic naming conventions):
+
+Package/Module Names: numpy, pandas
+Class Names: HTTPRequest, CustomerService
+Variable Names: user_age, total_sales
+Function Names: calculate_discount, fetch_data
+Constant Names: MAX_RETRY_ATTEMPTS, PI_VALUE

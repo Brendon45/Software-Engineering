@@ -113,3 +113,31 @@ When interacting with a weather API, the response might be returned in JSON form
 - To the browser, also known as the client, Facebook’s server is an API. This means that every time you visit a page on the Web, you interact with some remote server’s API.
 
 - An API isn’t the same as the remote server — rather it is the part of the server that receives requests and sends responses.
+
+## What CORS means?
+
+- 
+CORS stands for Cross-Origin Resource Sharing. It is a security feature implemented by web browsers to control how web pages from one domain can access resources (like data or APIs) on another domain. This security mechanism is used to prevent unauthorized cross-origin requests that could pose potential security risks.
+
+- Here's what CORS means and how it works with real-world examples:
+
+## Explanation:
+
+- When a web page makes a request to a different domain (i.e., different origin) via JavaScript (e.g., using fetch or XMLHttpRequest), the browser enforces CORS to determine whether the request is allowed. The server hosting the resource specifies in its response headers which origins are allowed to access the resource.
+
+## Real-World Examples:
+
+## 1. Cross-Origin API Requests:
+
+- Suppose you have a frontend web application hosted on https://example.com that needs to fetch data from an API hosted on https://api.example.com. Without CORS, the browser would block these requests due to the different origins. By configuring CORS on the API server (https://api.example.com), it can specify that requests from https://example.com are allowed, enabling the frontend to fetch data securely.
+
+## 2. Third-Party APIs:
+
+- Consider a scenario where a website wants to embed content (like a map or social media feed) from a third-party service (e.g., Google Maps or Twitter) into its pages. The third-party service must allow cross-origin requests from the website's domain to access their resources. This is often achieved by configuring CORS settings on the third-party service's servers.
+
+## 3. Single-Origin Policy (SOP) Bypass:
+
+- CORS helps enforce the Single-Origin Policy (SOP) implemented by web browsers, which restricts scripts running in a web page from making requests to different origins. By configuring CORS policies on servers, specific cross-origin requests can be permitted while maintaining security.
+
+- In summary, CORS is a security mechanism that allows controlled access to resources across different origins on the web. It enables secure data sharing and integration between web applications while preventing unauthorized access and potential security vulnerabilities.
+

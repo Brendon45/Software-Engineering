@@ -45,19 +45,23 @@ $('#elementId').css('color', 'red');
 - To get and update an element's content in JavaScript:
 
 // Get element content
+
 var content = document.getElementById('elementId').innerHTML;
 
 // Update element content
+
 document.getElementById('elementId').innerHTML = 'New content';
 
-In jQuery:
+- In jQuery:
 
 Code:
 
 // Get element content
+
 var content = $('#elementId').html();
 
 // Update element content
+
 $('#elementId').html('New content');
 
 ## How to modify the DOM
@@ -69,14 +73,21 @@ $('#elementId').html('New content');
 Code:
 
 $.ajax({
+		
   url: 'https://api.example.com/data',
+
   method: 'GET',
+
   success: function(response) {
+
     console.log(response);
   },
+  
   error: function(error) {
+  
     console.error('Error:', error);
   }
+
 });
 
 ## How to make a POST request with jQuery Ajax:
@@ -84,15 +95,23 @@ $.ajax({
 Code:
 
 $.ajax({
+
   url: 'https://api.example.com/data',
+
   method: 'POST',
+
   data: { key: 'value' },
+
   success: function(response) {
+
     console.log(response);
   },
+
   error: function(error) {
+
     console.error('Error:', error);
   }
+
 });
 
 ## How to listen/bind to DOM events:
@@ -102,11 +121,18 @@ $.ajax({
 Code:
 
 // JavaScript
+
 document.getElementById('buttonId').addEventListener('click', function() {
+
   console.log('Button clicked!');
+  
 });
 
+
 // jQuery
+
 $('#buttonId').on('click', function() {
+
   console.log('Button clicked!');
+
 });

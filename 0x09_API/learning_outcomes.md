@@ -39,7 +39,7 @@ Developing a high-frequency trading system where microseconds matter for executi
 
 ## In The Technical Terms:
 
-- A Client Applicaion Makes An HTTP Request Call To Another Application To Retrieve Some Data Via An API Call. The Application Running On The Server Processes The Request. Sometimes Fetches The Data From
+- A Client Applicaion Makes An HTTP Request Call To Another Application To Retrieve Some Data Via An API Call. The Application Running On The Server Processes The Request. Sometimes Fetches The Data From The Database And Sends The Response In The Format (JSON) That Client Application Wants.
 
 ## What is a REST API
 

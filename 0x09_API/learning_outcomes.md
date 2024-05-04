@@ -25,10 +25,21 @@ Developing a high-frequency trading system where microseconds matter for executi
 ## What is an API
 
 - An API (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It defines the methods and data formats that applications can use to request and exchange information.
+- Its A Mechanism To Communicate And Exchange Data Between Two Services Or Applications
+- API Stands For Application Programming Interface
 
 ## Real-world example (API):
 
-- The Google Maps API allows developers to integrate maps, geolocation services, and route planning into their applications. Developers can use the API to request map tiles, geocode addresses, and calculate directions.
+1. The Google Maps API allows developers to integrate maps, geolocation services, and route planning into their applications. Developers can use the API to request map tiles, geocode addresses, and calculate directions.
+
+## Lets Take An Example Of A Restaurant(API):
+
+- A customer is A Client Application And A Chef is An Application Running On The Server.
+- A waiter Acts As An API Who Takes An Order From The Customer And Communicates It To The Chef. Once The Food Is Ready. The Waiter Collects And Delivers It To The Customer.
+
+## In The Technical Terms:
+
+- A Client Applicaion Makes An HTTP Request Call To Another Application To Retrieve Some Data Via An API Call. The Application Running On The Server Processes The Request. Sometimes Fetches The Data From
 
 ## What is a REST API
 
@@ -37,7 +48,7 @@ Developing a high-frequency trading system where microseconds matter for executi
 ## Real-world example (REST API):
 
 - The Twitter API provides access to Twitter's data and functionality, allowing developers to create applications that interact with Twitter's platform. It follows REST principles, where developers can perform actions like retrieving tweets, posting tweets, and searching for users.
-
+i
 ## What are microservices
 
 - Microservices are an architectural style where a complex application is composed of small, independent services that communicate with each other over a network. Each service is responsible for a specific business function and can be developed, deployed, and scaled independently.

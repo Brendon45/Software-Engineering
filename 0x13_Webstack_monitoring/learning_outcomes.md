@@ -38,3 +38,7 @@
 ## Infrastructure Monitoring:
 
 - This involves tracking the performance and health of hardware, networks, servers, databases, and other IT components. It includes metrics such as CPU usage, memory, disk space, network traffic, and system uptime.
+
+## Application Monitoring:
+
+- Application monitoring focuses on tracking the performance and behavior of software applications. It includes metrics related to response times, error rates, transaction volumes, user interactions, and resource consumption. Application monitoring helps assess the end-to-end health and performance of applications.

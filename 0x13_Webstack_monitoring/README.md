@@ -26,3 +26,6 @@
     - [What is application monitoring](#what-is-application-monitoring)
     - [System monitoring by Google](#system-monitoring-by-google)
     - [Nginx logging and monitoring](#nginx-logging-and-monitoring)
+
+Author: Brendon Jeje
+Email: jejebrendon722@gmail.com

@@ -60,3 +60,37 @@
 ## Nagios
 
 - Nagios is an open source project started in 1999, it is among the most widely used monitoring tools in the tech industry. It is, however, seen as outdated. Nagios had trouble adapting to the rise of the Cloud but is slowly trying to catch up.
+
+## WaveFront
+
+- Wavefront is a cutting edge monitoring service funded by great software engineers who’ve built monitoring tools for the best tech companies in Silicon Valley. 
+- The idea is to be able to analyze anything that can produce data points. A query language that looks like SQL allows users to apply mathematical operations to these data points to extract values or detect anomalies from the time series data. 
+- While it takes some time to get used to the tool, it’s the type of monitoring that the best companies are using. To my knowledge, LinkedIn, Facebook and DropBox are using a very similar tool for their monitoring needs.
+
+## What are access logs for a web server (such as Nginx)?
+
+- Access logs in a web server like Nginx record detailed information about each HTTP request received by the server. These logs typically include:
+
+1. Client IP Address:
+
+-  The IP address of the client making the request.
+
+2. Timestamp:
+
+- The date and time of the request.
+
+3. Request Details: 
+
+- The HTTP method (e.g., GET, POST), requested URL, and HTTP protocol version.
+
+4. Response Status Code:
+
+- The HTTP status code returned by the server (e.g., 200 for success, 404 for not found).
+
+5. User-Agent:
+
+- The user-agent string identifying the client's browser or application.
+
+6. Referrer:
+
+- The URL of the referring page.

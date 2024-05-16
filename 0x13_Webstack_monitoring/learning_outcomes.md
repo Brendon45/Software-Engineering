@@ -100,3 +100,23 @@
 - The number of bytes sent in response to the request.
 
 - Access logs are valuable for monitoring traffic patterns, diagnosing issues, analyzing user behavior, and auditing server activity.
+
+## What are error logs for a web server (such as Nginx)?
+
+- Error logs in a web server like Nginx record information about errors encountered during server operations. These logs typically include:
+
+1. Timestamp:
+
+- The date and time of the error.
+
+1. Error Level:
+
+- The severity level of the error (e.g., info, warning, error).
+
+2. Error Details:
+
+- Information about the error, including error messages, stack traces, or specific error codes.
+
+3. Request Details:
+
+- Contextual information about the request that triggered the error.

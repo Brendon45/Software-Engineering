@@ -23,3 +23,18 @@
 - You cannot fix or improve what you cannot measure is a famous saying in the tech industry. In the age of the data-ism, monitoring how our software systems are doing is an important thing.
 
 - Web stack monitoring can be broken down into 2 categories:
+
+## Application monitoring:
+
+- getting data about your running software and making sure it is behaving as expected
+
+## Server monitoring:
+
+-  getting data about your virtual or physical server and making sure they are not overloaded (could be CPU, memory, disk or network overload)
+
+## What are the 2 main areas of monitoring?
+- The two primary areas of monitoring are:
+
+## Infrastructure Monitoring:
+
+- This involves tracking the performance and health of hardware, networks, servers, databases, and other IT components. It includes metrics such as CPU usage, memory, disk space, network traffic, and system uptime.

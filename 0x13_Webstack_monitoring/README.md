@@ -1,4 +1,4 @@
-# 0x18. Webstack monitoring
+# 0x13_Webstack_monitoring
 
 ## DevOps
 
@@ -23,6 +23,6 @@
 - Read or watch:
 
     - [What is server monitoring](#what-is-server-monitoring)
-    - What is application monitoring
-    - System monitoring by Google
-    - Nginx logging and monitoring
+    - [What is application monitoring](#what-is-application-monitoring)
+    - [System monitoring by Google](#system-monitoring-by-google)
+    - [Nginx logging and monitoring](#nginx-logging-and-monitoring)

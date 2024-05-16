@@ -94,3 +94,9 @@
 6. Referrer:
 
 - The URL of the referring page.
+
+7. Bytes Sent:
+
+- The number of bytes sent in response to the request.
+
+- Access logs are valuable for monitoring traffic patterns, diagnosing issues, analyzing user behavior, and auditing server activity.

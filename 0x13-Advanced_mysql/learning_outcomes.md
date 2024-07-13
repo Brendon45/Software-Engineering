@@ -123,7 +123,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This creates a full-text index on the `name` column, optimizing text searches.
 
-5. Dropping an Index
+5. __Dropping an Index__
 
         DROP INDEX idx_user_email ON users;
 

@@ -202,3 +202,73 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 ## Triggers
 
 - Triggers are database objects that automatically execute a specified set of SQL statements when certain events occur in the database (e.g., ``INSERT``, ``UPDATE``, ``DELETE``).
+
+## Examples of Triggers
+
+1. Creating a Trigger
+
+        DELIMITER //
+        CREATE TRIGGER decrement_order AFTER INSERT ON orders
+        FOR EACH ROW
+        BEGIN
+          UPDATE items SET quantity = quantity - NEW.number WHERE name = NEW.item_name;
+        END //
+        DELIMITER ;
+
+- This trigger decreases the `quantity` of an item in the `items` table after a new order is inserted into the `orders` table.
+
+2. Trigger to Reset Attribute
+
+        DELIMITER //
+        CREATE TRIGGER email_validate_trigger BEFORE UPDATE ON users
+        FOR EACH ROW
+        BEGIN
+          IF NEW.email <> OLD.email THEN
+            SET NEW.valid_email = 0;
+          END IF;
+        END //
+        DELIMITER ;
+
+- This trigger sets the `valid_email` field to 0 if the `email` field is changed during an update on the `users` table.
+
+3. Deleting a Trigger
+
+        DROP TRIGGER IF EXISTS decrement_order;
+
+- This removes the `decrement_order` trigger if it exists.
+
+## Examples of Advanced MySQL Concepts
+
+1. Example Stored Procedure
+
+        DELIMITER //
+        CREATE PROCEDURE ComputeAverageScoreForUser (IN user_id INT)
+        BEGIN
+          DECLARE average FLOAT;
+          SET average = (SELECT AVG(score) FROM corrections WHERE user_id = user_id);
+          UPDATE users SET average_score = average WHERE id = user_id;
+        END //
+        DELIMITER ;
+
+        -- Call the procedure
+        CALL ComputeAverageScoreForUser(1);
+
+- This stored procedure calculates the average score of a user from the `corrections` table and updates the `average_score` field in the `users` table for the given `user_id`.
+
+2. ``Example Trigger``
+
+        DELIMITER //
+        CREATE TRIGGER reset_valid_email BEFORE UPDATE ON users
+        FOR EACH ROW
+        BEGIN
+          IF NEW.email <> OLD.email THEN
+            SET NEW.valid_email = 0;
+          END IF;
+        END //
+        DELIMITER ;
+
+- This trigger sets the `valid_email` field to 0 if the `email` field is changed during an update on the `users` table.
+
+- These examples illustrate the use of advanced SQL features to create more robust and efficient databases, enhancing both data integrity and performance.
+
+

@@ -135,9 +135,69 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - ``Function:`` Similar to stored procedures but can return a single value and are often used in SQL statements.
 
+## Examples of Stored Procedures and Functions
+
+1. Stored Procedure
+
+        DELIMITER //
+        CREATE PROCEDURE GetUser(IN user_id INT)
+        BEGIN
+          SELECT * FROM users WHERE id = user_id;
+        END //
+        DELIMITER ;
+
+        -- Call the procedure
+        CALL GetUser(1);
+
+- This stored procedure retrieves all columns from the `users` table for a given `user_id`.
+
+2. Function
+
+        DELIMITER //
+        CREATE FUNCTION GetUserName(user_id INT) RETURNS VARCHAR(255)
+        BEGIN
+           DECLARE name VARCHAR(255);
+          SELECT name INTO name FROM users WHERE id = user_id;
+          RETURN name;
+        END //
+        DELIMITER ;
+
+        -- Use the function
+        SELECT GetUserName(1);
+
+- This function returns the `name` of a user given their `user_id`.
+
 ## Views
 
 - Views are virtual tables created by querying one or more tables. They provide a simplified representation of data, which can help in managing complex queries.
+
+## Examples of Views
+
+1. Creating a View
+
+        CREATE VIEW UserEmails AS
+        SELECT id, email FROM users;
+
+        -- Query the view
+        SELECT * FROM UserEmails;
+
+- This creates a view named `UserEmails` that selects the `id` and email columns from the `users` table.
+
+2. Updating a View
+
+        CREATE VIEW UserDetails AS
+        SELECT id, name, email FROM users;
+
+        -- Update the view
+        UPDATE UserDetails SET email = 'newemail@example.com' WHERE id = 1;
+
+- This creates a view named `UserDetails` and allows updates to the underlying data.
+
+3. Dropping a View
+
+        DROP VIEW UserEmails;
+
+- This removes the `UserEmails` view.
 
 ## Triggers
 

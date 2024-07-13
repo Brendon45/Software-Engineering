@@ -39,7 +39,7 @@ This code creates a table named users with:
 
 - `country:` An enumeration with default value 'US', restricting entries to 'US', 'CO', or 'TN'.
 
-2. Foreign Key
+2. **Foreign Key**
 
         CREATE TABLE orders (
          order_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -52,7 +52,7 @@ This code creates a table named orders with:
 - `order_id:` An auto-incrementing integer serving as the primary key.
 - `user_id:` An integer referencing the id field in the users table, establishing a relationship between orders and users.
 
-3. Unique Constraint
+3. **Unique Constraint**
 
         CREATE TABLE products (
          product_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +64,7 @@ This code creates a table named products with:
 - `product_id:` An auto-incrementing integer serving as the primary key.
 - `product_name:` A unique, non-nullable string to store product names.
 
-4. Check Constraint
+4. **Check Constraint**
 
         CREATE TABLE employees (
          emp_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -77,7 +77,7 @@ This code creates a table named employees with:
 - `emp_id:` An auto-incrementing integer serving as the primary key.
 - `age:` An integer that must be 18 or older.
 
-5. Not Null Constraint
+5. **Not Null Constraint**
 
         CREATE TABLE orders (
          order_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -99,25 +99,25 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 ## Examples of Optimizing Queries by Adding Indexes:
 
-1. Single Column Index
+1. **Single Column Index**
 
         CREATE INDEX idx_user_email ON users(email);
 
 - This creates an index on the `email` column in the `users` table, speeding up queries filtering by email.
 
-2. Composite Index
+2. **Composite Index**
 
         CREATE INDEX idx_user_name_country ON users(name, country);
 
 - This creates an index on the `name` and `country` columns, optimizing queries filtering by both.
 
-3. Unique Index
+3. **Unique Index**
 
         CREATE UNIQUE INDEX idx_unique_email ON users(email);
 
 - This ensures all values in the `email` column are unique.
 
-4. Full-Text Index
+4. **Full-Text Index**
 
         CREATE FULLTEXT INDEX idx_fulltext_name ON users(name);
 
@@ -137,7 +137,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 ## Examples of Stored Procedures and Functions
 
-1. Stored Procedure
+1. **Stored Procedure**
 
         DELIMITER //
         CREATE PROCEDURE GetUser(IN user_id INT)
@@ -151,7 +151,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This stored procedure retrieves all columns from the `users` table for a given `user_id`.
 
-2. Function
+2. **Function**
 
         DELIMITER //
         CREATE FUNCTION GetUserName(user_id INT) RETURNS VARCHAR(255)
@@ -173,7 +173,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 ## Examples of Views
 
-1. Creating a View
+1. **Creating a View**
 
         CREATE VIEW UserEmails AS
         SELECT id, email FROM users;
@@ -183,7 +183,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This creates a view named `UserEmails` that selects the `id` and email columns from the `users` table.
 
-2. Updating a View
+2. **Updating a View**
 
         CREATE VIEW UserDetails AS
         SELECT id, name, email FROM users;
@@ -193,7 +193,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This creates a view named `UserDetails` and allows updates to the underlying data.
 
-3. Dropping a View
+3. **Dropping a View**
 
         DROP VIEW UserEmails;
 
@@ -205,7 +205,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 ## Examples of Triggers
 
-1. Creating a Trigger
+1. **Creating a Trigger**
 
         DELIMITER //
         CREATE TRIGGER decrement_order AFTER INSERT ON orders
@@ -217,7 +217,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This trigger decreases the `quantity` of an item in the `items` table after a new order is inserted into the `orders` table.
 
-2. Trigger to Reset Attribute
+2. **Trigger to Reset Attribute**
 
         DELIMITER //
         CREATE TRIGGER email_validate_trigger BEFORE UPDATE ON users
@@ -231,7 +231,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This trigger sets the `valid_email` field to 0 if the `email` field is changed during an update on the `users` table.
 
-3. Deleting a Trigger
+3. **Deleting a Trigger**
 
         DROP TRIGGER IF EXISTS decrement_order;
 
@@ -239,7 +239,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 ## Examples of Advanced MySQL Concepts
 
-1. Example Stored Procedure
+1. **Example Stored Procedure**
 
         DELIMITER //
         CREATE PROCEDURE ComputeAverageScoreForUser (IN user_id INT)
@@ -255,7 +255,7 @@ Indexes are special data structures that improve the speed of ```data retrieval`
 
 - This stored procedure calculates the average score of a user from the `corrections` table and updates the `average_score` field in the `users` table for the given `user_id`.
 
-2. ``Example Trigger``
+2. **Example Trigger**
 
         DELIMITER //
         CREATE TRIGGER reset_valid_email BEFORE UPDATE ON users

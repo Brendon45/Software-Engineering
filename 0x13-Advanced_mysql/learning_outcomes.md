@@ -20,7 +20,7 @@ Creating tables with constraints involves defining rules and limitations on the 
 
 ## Examples of Creating Tables with Constraints:
 
-1. Primary Key
+1. **Primary Key**
 
         CREATE TABLE users (
          id INT AUTO_INCREMENT PRIMARY KEY,

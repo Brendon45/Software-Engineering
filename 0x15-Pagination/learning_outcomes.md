@@ -7,6 +7,7 @@
 __Read or watch:__
 
 [REST API Design: Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#pagination)
+
 [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)
 
 ## Definition of Pagination
@@ -30,3 +31,5 @@ __Pagination__ is the process of dividing a large dataset into `smaller`, manage
 
     - Uses a cursor (`usually the ID of the last item`) to fetch the next set of results.
     - Example: Retrieving the next set of student records starting from the last retrieved student ID, ensuring that even if items are deleted, pagination remains consistent.
+
+## Explanation of the Provided Codes

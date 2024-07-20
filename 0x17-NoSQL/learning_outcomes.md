@@ -105,3 +105,66 @@ __Document storage__ is a type of NoSQL database that stores data as documents, 
 - __Deleting:__
 
       db.collection.delete_one({ "name": "Alice" })
+
+## Mongosh
+
+__Mongosh__ is the `MongoDB Shell`, a command-line interface for interacting with MongoDB instances. It provides a JavaScript-based environment to run database operations.
+
+- __Start Mongosh:__
+
+      mongosh
+
+- __Basic Commands:__
+
+      show dbs
+      use mydatabase
+      show collections
+
+### Detailed Example with MongoDB and Python
+
+1. __Connecting and Creating a Collection:__
+
+       from pymongo import MongoClient
+
+       client = MongoClient('mongodb://localhost:27017/')
+       db = client.mydatabase
+       collection = db.mycollection
+
+2. __Inserting Documents:__
+
+       # Single document
+       collection.insert_one({ "name": "Alice", "age": 25 })
+
+       # Multiple documents
+       collection.insert_many([
+           { "name": "Bob", "age": 30 },
+           { "name": "Charlie", "age": 35 }
+       ])
+
+3. __Querying Documents:__
+
+       # Find one document
+       document = collection.find_one({ "name": "Alice" })
+       print(document)
+
+       # Find multiple documents
+       for doc in collection.find({ "age": { "$gt": 25 } }):
+           print(doc)
+
+4. __Updating Documents:__
+
+       # Update one document
+       collection.update_one({ "name": "Alice" }, { "$set": { "age": 26 } })
+
+       # Update multiple documents
+       collection.update_many({ "age": { "$lt": 35 } }, { "$set": { "status": "active" } })
+
+5. __Deleting Documents:__
+
+       # Delete one document
+       collection.delete_one({ "name": "Alice" })
+
+       # Delete multiple documents
+       collection.delete_many({ "age": { "$lt": 35 } })
+
+This comprehensive guide provides you with the foundational knowledge of `NoSQL databases`, their `types`, `benefits`, and how to perform basic operations using MongoDB and Python.

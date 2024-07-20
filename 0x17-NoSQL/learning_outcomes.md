@@ -61,3 +61,47 @@ __ACID__ is a set of properties that guarantee reliable processing of database t
 
 - __Durability:__ Ensures that once a transaction is committed, it will remain so, even in the event of a system failure.
 
+## What is Document Storage?
+
+__Document storage__ is a type of NoSQL database that stores data as documents, typically in JSON, BSON, or XML format. Each document can have a unique structure, allowing for flexibility and the ability to store complex nested data.
+
+## Types of NoSQL Databases
+
+1. __Document Databases:__ Store data as documents (`e.g., MongoDB, CouchDB`).
+
+2. __Key-Value Stores:__ Store data as key-value pairs (`e.g., Redis, DynamoDB`).
+
+3. __Column-Family Stores:__ Store data in columns rather than rows (`e.g., Apache Cassandra, HBase`).
+
+4. __Graph Databases:__ Store data as nodes and relationships (`e.g., Neo4j, OrientDB`).
+
+## Benefits of NoSQL Databases
+
+- __Scalability:__ Easily scales horizontally.
+
+- __Flexibility:__ Allows for dynamic schema design.
+
+- __Performance:__ Optimized for specific use cases like read-heavy or write-heavy applications.
+
+- __Big Data:__ Handles large volumes of data efficiently.
+
+## Querying Information from a NoSQL Database
+
+- __Document Databases:__ Use document-based query languages.
+ Example in MongoDB:
+
+      db.collection.find({ "name": "Alice" })
+
+## Inserting/Updating/Deleting Information from a NoSQL Database
+
+- __Inserting:__
+
+      db.collection.insert_one({ "name": "Alice", "age": 25 })
+
+- __Updating:__
+
+      db.collection.update_one({ "name": "Alice" }, { "$set": { "age": 26 } })
+
+- __Deleting:__
+
+      db.collection.delete_one({ "name": "Alice" })

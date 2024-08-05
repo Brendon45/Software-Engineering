@@ -117,4 +117,4 @@ __app.py:__
 
    - Visit `http://localhost:5000/deletecookie` to delete the `username` cookie.
   
-By following these steps, you can understand how ```cookies`` are `sent`, stored, and managed in ```web applications```.
+By following these steps, you can understand how ```cookies``` are `sent`, stored, and managed in ```web applications```.

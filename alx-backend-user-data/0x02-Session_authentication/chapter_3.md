@@ -77,7 +77,44 @@ __app.py:__
 4. Get Cookie Route (/getcookie):
 
       - Retrieves the username cookie value from the client's subsequent requests and returns it if it exists.
-Delete Cookie Route (/deletecookie):
 
-Deletes the username cookie using resp.delete_cookie('username').
-The response indicates that the cookie has been deleted.
+5. __Delete Cookie Route__ (`/deletecookie`):
+
+   - Deletes the username cookie using resp.delete_cookie('username').
+   - The response indicates that the cookie has been deleted.
+  
+## Summary
+
+- __Sending Cookies__: Cookies are created on the server and sent to the client as part of the HTTP response headers.
+
+- __Storing Cookies__: The client (browser) stores the cookies and sends them back with subsequent requests to the server.
+
+- __Managing Cookies in Flask__:
+
+   - Use `make_response` to create a response object.
+
+   - Use `set_cookie` to attach cookies to the response.
+
+   - Use `request.cookies` to read cookies from the client's request.
+
+   - Use `delete_cookie` to remove cookies from the client's browser.
+ 
+## Testing the Example
+
+1. __Run the Flask Application__:
+
+        python app.py
+
+2. __Set a Cookie__:
+
+   - Visit `http://localhost:5000/setcookie` in your browser to set the `username` cookie.
+  
+3. __Get the Cookie__:
+
+   - Visit `http://localhost:5000/getcookie` to retrieve and display the `username` cookie.
+  
+4. __Delete the Cookie__:
+
+   - Visit `http://localhost:5000/deletecookie` to delete the `username` cookie.
+  
+By following these steps, you can understand how ```cookies`` are `sent`, stored, and managed in ```web applications```.

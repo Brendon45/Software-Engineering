@@ -37,7 +37,7 @@ __app.py:__
     @app.route('/setcookie')
     def set_cookie():
         resp = make_response('Cookie has been set!')
-        resp.set_cookie('username', 'Cobby', max_age=60*60*24*30)  # Cookie valid for 30 days
+        resp.set_cookie('username', 'Brendon', max_age=60*60*24*30)  # Cookie valid for 30 days
         return resp
 
     @app.route('/getcookie')
@@ -70,7 +70,7 @@ __app.py:__
 
 3. __Set Cookie Route (/setcookie)__:
 
-      - Creates a response with make_response and sets a username cookie with the value Cobby.
+      - Creates a response with make_response and sets a username cookie with the value Brendon.
       - The max_age=60*60*24*30 parameter ensures the cookie is valid for 30 days.
       - The response with the cookie is sent back to the client.
         
